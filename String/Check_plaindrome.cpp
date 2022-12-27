@@ -1,4 +1,4 @@
-// reverse  a string 
+// Check string is palindrome string or not
 
 #include<iostream>
 using namespace std;
