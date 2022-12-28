@@ -13,7 +13,7 @@ int main(){
       return 0;
     }
     int  k=s1.size();
-    s1+=s2;
+    s1+=s1;
     int n=s1.size();
     for(int i=0;i<=n-k;i++){
 
