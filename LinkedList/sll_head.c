@@ -2,57 +2,55 @@
 #include<stdlib.h>
 
 typedef struct node{
+
     int data;
     struct node *next;
-}NODE;
+}Node;
 
-NODE *st=NULL;  //head pointer
+//fn to create new node
+Node* createNode(int data){
 
-
-// fn to create node
-NODE* createNode(int data){
-
-    NODE *a=(NODE*) malloc(sizeof(NODE));
+    Node *a=(Node *) malloc(sizeof(Node));
     a->data=data;
     a->next=NULL;
     return a;
 }
 
-// fn to reterive last node address
-NODE *getlastNode(){
+Node *st=NULL;  //head pointer
 
-    NODE* a=st;
+//fn to get last node address
+Node* getlastNode(){
+
+    Node *a=st;
     if(!a)
-      return NULL;
+      return a;
     while(a->next){
         a=a->next;
     }
     return a;
 }
 
-// fn to display slist
+//fn to display list
 void display(){
-
-    NODE* a=st;
-    if(!a){
-        printf("Empty List");
-        return;
+    
+    if(!st){
+      printf("\n\nEmpty List");
+      return;
     }
 
-    printf("\n\nList Data:");
+    Node *a=st;
+    printf("\nList data:");
     while(a){
         printf("%4d",a->data);
         a=a->next;
     }
 }
 
-//fn to count nodes from the list
-
+//fn to count nodes from  list
 int count(){
     
-    NODE* a=st;
+    Node *a=st;
     int cnt=0;
-
     while(a){
         cnt++;
         a=a->next;
@@ -60,13 +58,12 @@ int count(){
     return cnt;
 }
 
-// fn to compute sum
 
+//fn to compute sum from  list
 int sum(){
     
-    NODE* a=st;
+    Node *a=st;
     int sum=0;
-
     while(a){
         sum+=a->data;
         a=a->next;
@@ -74,53 +71,62 @@ int sum(){
     return sum;
 }
 
-//fn to add new data at end
+// fn to add new data at end
 void addEnd(int data){
 
-    NODE *a,*b;
-    a=createNode(data);
-    if(!st)
+    Node *a=createNode(data);
+    if(!st){
       st=a;
-    else{
-        b=getlastNode();
-        b->next=a;
+      return;
     }
+    Node *b=getlastNode();
+    b->next=a;
 }
 
-// fn to add new Node at Begin
+// fn to add new node at begin
 void addBeg(int data){
 
-    NODE *a=createNode(data);
+    Node *a=createNode(data);
     a->next=st;
     st=a;
 }
 
-// fn to find minimum from the slist
-
-int findMin(){
-
-    NODE *a=st;
-    int min=st->data;
-    while(a){
-        if(a->data < min)
-           min=a->data;
-        a=a->next;
-    }
-    return min;
-}
-
-// fn to find maximum from the slist
-
+// fn to find max from the list
 int findMax(){
 
-    NODE *a=st;
-    int max=st->data;
+    if(!st){
+      printf("\n\nEmpty List");
+      return;
+    }
+
+    Node *a=st;
+    int max=a->data;
     while(a){
+
         if(a->data > max)
-           max=a->data;
+          max=a->data;
         a=a->next;
     }
     return max;
+}
+
+// fn to find min from the list
+int findMin(){
+
+    if(!st){
+      printf("\n\nEmpty List");
+      return;
+    }
+
+    Node *a=st;
+    int min=a->data;
+    while(a){
+
+        if(a->data < min)
+          min=a->data;
+        a=a->next;
+    }
+    return min;
 }
 
 void main(){
