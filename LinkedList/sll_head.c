@@ -96,7 +96,7 @@ int findMax(){
 
     if(!st){
       printf("\n\nEmpty List");
-      return;
+      return -1;
     }
 
     Node *a=st;
@@ -115,7 +115,7 @@ int findMin(){
 
     if(!st){
       printf("\n\nEmpty List");
-      return;
+      return -1;
     }
 
     Node *a=st;
@@ -129,7 +129,7 @@ int findMin(){
     return min;
 }
 
-void main(){
+int main(){
 
     int d,opt;
     printf("\n Single Linked List");
@@ -170,5 +170,6 @@ void main(){
       }
 
     }
+    return 0;
 }
 

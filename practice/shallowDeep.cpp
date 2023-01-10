@@ -1,3 +1,7 @@
+// shallow copy --> Creating a copy of object by copying data of all member variables as it is, is called shallow copy 
+
+//deep Copy--> Creating an object by copying data of another object along with the values of memory resources resides outside the object but handled by that object, is called deep copy.
+
 #include<iostream>
 using namespace std;
 
