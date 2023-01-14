@@ -1,5 +1,9 @@
 // // C++ program to find number of operations
 // // to make an array palindrome
+
+//Time:O(n)
+//Space: O(1)
+
 // #include <bits/stdc++.h>
 // using namespace std;
  
