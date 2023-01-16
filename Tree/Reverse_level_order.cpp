@@ -11,6 +11,9 @@
 
 // Note: Here first we are inserting right into queue then left and finally we are reversing the output
 
+//Time :O(n)
+// Space: O(n)
+
 // vector<int> reverseLevelOrder(Node *node)
 // {
 //     // code here
