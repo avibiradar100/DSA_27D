@@ -1,0 +1,19 @@
+// public class Main
+// {
+// 	public static void main(String[] args) {
+	    
+// 	    Scanner s=new Scanner(System.in);
+	    
+// 	    String str=s.nextLine();
+	    
+// 		System.out.println(str.matches("[0-9 a-z A-Z]*"));
+// 	}
+// }
+
+// sample1:
+// 213 fejd we23e w3me2 edkms dskdm sd
+// true
+
+// Sample2
+// ###$@ djsds wdms #Dks
+// false
