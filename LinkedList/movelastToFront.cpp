@@ -1,6 +1,6 @@
 
-Time:O(N)
-Space:O(1)
+// Time:O(N)
+// Space:O(1)
 
 // void moveToFront(Node* head)
 // {
